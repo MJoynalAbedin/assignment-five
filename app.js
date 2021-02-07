@@ -25,6 +25,7 @@ function searchFood() {
             .then(data => {
 
                 mealHeading.innerHTML = `<h3 class="result-heading">Here are the results for: ${searchValue}</h3>`
+                searchBar.value = '';
 
                 if (data.meals === null) {
                     mealHeading.innerHTML = `<h3 style="color:red" class="error-heading">Sorry no results for: ${searchValue}</h3>`
